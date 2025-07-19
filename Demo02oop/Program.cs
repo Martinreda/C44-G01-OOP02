@@ -25,6 +25,15 @@
 
 
             #endregion
+
+            #region OOP Defination
+            /*
+             * every thing is object
+             * oop aims to structure software in a way thats model real entites using oop concepts 
+             * zy al 3rabya bttgmm3 wa7da wa7da 3la4n nkwanhaa 
+             */
+            #endregion
+
         }
     }
 }
