@@ -4,7 +4,27 @@
     {
         static void Main(string[] args)
         {
-            Console.WriteLine("Hello, World!");
+            #region Struct
+            /*
+             * Struct Value Type
+             * struct comes from C lang 
+             * Struct doesnot allow inheritance
+             * Struct privte public internal 
+             */
+
+            //Calling  i must have CTOR on strucrt
+            Point P1;
+
+            P1 = new Point(1,2); // New just for ctor selection not referance 
+                          //assign x = 1 y = 2
+            Console.WriteLine(P1);
+
+            /*struct at memory
+             * stack
+             */
+
+
+            #endregion
         }
     }
 }
