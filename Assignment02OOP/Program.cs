@@ -1,5 +1,7 @@
 ﻿using System.ComponentModel;
 using System.Drawing;
+using static System.Runtime.InteropServices.JavaScript.JSType;
+using System.Net.NetworkInformation;
 
 namespace Assignment02OOP
 {
@@ -61,47 +63,73 @@ namespace Assignment02OOP
             //Write a C# program that takes details of 3 persons as input from the user 
             //and displays the name and age of the oldest person.
 
-            Person02 person1, person2, person3;
+            //Person02 person1, person2, person3;
 
-            // --- Input 1 ---
-            Console.Write("Enter name of person 1: ");
-            string name1 = Console.ReadLine();
+            //// --- Input 1 ---
+            //Console.Write("Enter name of person 1: ");
+            //string name1 = Console.ReadLine();
 
-            Console.Write("Enter age of person 1: ");
-            int age1 = int.Parse(Console.ReadLine());
+            //Console.Write("Enter age of person 1: ");
+            //int age1 = int.Parse(Console.ReadLine());
 
-            person1 = new Person02(name1, age1);
+            //person1 = new Person02(name1, age1);
 
-            // --- Input 2 ---
-            Console.Write("Enter name of person 2: ");
-            string name2 = Console.ReadLine();
+            //// --- Input 2 ---
+            //Console.Write("Enter name of person 2: ");
+            //string name2 = Console.ReadLine();
 
-            Console.Write("Enter age of person 2: ");
-            int age2 = int.Parse(Console.ReadLine());
+            //Console.Write("Enter age of person 2: ");
+            //int age2 = int.Parse(Console.ReadLine());
 
-            person2 = new Person02(name2, age2);
+            //person2 = new Person02(name2, age2);
 
-            // --- Input 3 ---
-            Console.Write("Enter name of person 3: ");
-            string name3 = Console.ReadLine();
+            //// --- Input 3 ---
+            //Console.Write("Enter name of person 3: ");
+            //string name3 = Console.ReadLine();
 
-            Console.Write("Enter age of person 3: ");
-            int age3 = int.Parse(Console.ReadLine());
+            //Console.Write("Enter age of person 3: ");
+            //int age3 = int.Parse(Console.ReadLine());
 
-            person3 = new Person02(name3, age3);
+            //person3 = new Person02(name3, age3);
 
-            // --- Find Oldest ---
-            Person02 oldest = person1;
+            //// --- Find Oldest ---
+            //Person02 oldest = person1;
 
-            if (person2.Age > oldest.Age)
-                oldest = person2;
+            //if (person2.Age > oldest.Age)
+            //    oldest = person2;
 
-            if (person3.Age > oldest.Age)
-                oldest = person3;
+            //if (person3.Age > oldest.Age)
+            //    oldest = person3;
 
-            Console.WriteLine($"\nThe oldest person is: {oldest.Name}, Age: {oldest.Age}");
-        
-        #endregion
-    }
-    }
+            //Console.WriteLine($"\nThe oldest person is: {oldest.Name}, Age: {oldest.Age}");
+
+            #endregion
+
+            #region Q04
+            //            4.Create a struct named Rectangle that represents a rectangle with the following fields:
+            //width(type: double)
+            //height(type: double)
+
+            //Implement encapsulation by making the fields private and provide public properties access and modify these values.Ensure the following conditions are met:
+            //The width and height should not be negative. If a negative value is provided, the setter should not update the field and should instead print an error message.
+            //Implement a public read-only property Area that calculates and returns the area of the rectangle(Area = width * height).
+
+            //Implement a method DisplayInfo that prints the rectangle's dimensions and area.
+            //Write a program to demonstrate the usage of this struct by creating an instance, setting values via properties, and displaying the area.
+
+            Rectangle rect = new Rectangle();
+
+          
+            Console.Write("Enter width: ");
+            rect.Width = Convert.ToDouble(Console.ReadLine());
+
+            Console.Write("Enter height: ");
+            rect.Height = Convert.ToDouble(Console.ReadLine());
+
+            
+            rect.DisplayInfo();
+
+            #endregion
+        }
+}
 }
