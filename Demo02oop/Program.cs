@@ -40,26 +40,44 @@
             #endregion
 
             #region Encapsulation
-            Employee emp01 = new Employee(1, "martin",1000); // new for ctor selection
-            //Console.WriteLine( emp01);
+            //Employee emp01 = new Employee(1, "martin", 1000); // new for ctor selection
+            ////Console.WriteLine( emp01);
 
-            //emp01.Id = 22;
-            //emp01.name = "R";
-            //Console.WriteLine(emp01); //struct not protactive
+            ////emp01.Id = 22;
+            ////emp01.name = "R";
+            ////Console.WriteLine(emp01); //struct not protactive
 
 
-            // using getter
-            Console.WriteLine(emp01.GetName());
+            //// using getter
+            //Console.WriteLine(emp01.GetName());
 
-            //using setter
-            emp01.SetName("mm");
-            Console.WriteLine(emp01.GetName());
+            ////using setter
+            //emp01.SetName(ref emp01, "mhhm");
+            //Console.WriteLine(emp01.GetName());
 
+
+
+
+            //Employee emp01 = new Employee(1, "Ali", 25);
+            //SetEmployeeName(ref emp01, "Martin");
+
+            //Console.WriteLine(emp01.GetName());
+
+            //static void SetEmployeeName(ref Employee emp, string newName)
+            //{
+            //    emp.SetName("newName");
+            //}
 
 
 
             #endregion
 
+            #region Encapsulation properaties
+            Employee emp02 = new Employee();
+            emp02.Salary = 1500;
+            Console.WriteLine(emp02);
+             
+            #endregion 
         }
     }
 }

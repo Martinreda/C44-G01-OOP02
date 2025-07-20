@@ -1,6 +1,7 @@
 ﻿using System;
 using System.Collections.Generic;
 using System.Linq;
+using System.Reflection.Metadata.Ecma335;
 using System.Text;
 using System.Threading.Tasks;
 
@@ -12,6 +13,7 @@ namespace Demo02oop
         public int Id;
         public string name;
         public int age;
+        public decimal salary; 
         #endregion
 
         #region CTOR
@@ -36,18 +38,42 @@ namespace Demo02oop
 
         #region Apply encapsulation using setter Getter methods
         // Getter => get name 
-        public string GetName ()
+        public string GetName()
         {
             return name;
         }
 
         //Setters
-        public void SetName(string Name)
+        public void SetName(string name)
         {
-            Name = name;
+            this.name = name;
         }
 
         #endregion
+
+        #region 2. applay encapsulation using propertey
+        //property can't take parameter 
+        //need to valdation 
+        //when use property att=> small property => capital 
+
+        #region full propertey
+        private decimal salary;
+        public decimal Salary
+        {
+            get
+            {
+                return salary;
+            }
+            set
+            {
+                salary = value;
+            }
+        }
+
+        #endregion
+
+        #endregion
+
         #region Method 
 
         public override string ToString()
