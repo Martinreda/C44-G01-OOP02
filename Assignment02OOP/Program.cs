@@ -31,30 +31,77 @@ namespace Assignment02OOP
             /*2.Create a struct called "Point" to represent a 2D point with properties "X" and   "Y". 
             Write a C# program that takes two points as input from the user and calculates the distance between them.*/
 
-            Point point = new Point();
+            //Point point = new Point();
 
-            Console.Write("Enter X1: ");
-            double x1 = Convert.ToDouble(Console.ReadLine());
+            //Console.Write("Enter X1: ");
+            //double x1 = Convert.ToDouble(Console.ReadLine());
 
-            Console.Write("Enter Y1: ");
-            double y1 = Convert.ToDouble(Console.ReadLine());
+            //Console.Write("Enter Y1: ");
+            //double y1 = Convert.ToDouble(Console.ReadLine());
 
-            Console.Write("Enter X2: ");
-            double x2 = Convert.ToDouble(Console.ReadLine());
+            //Console.Write("Enter X2: ");
+            //double x2 = Convert.ToDouble(Console.ReadLine());
 
-            Console.Write("Enter Y2: ");
-            double y2 = Convert.ToDouble(Console.ReadLine());
+            //Console.Write("Enter Y2: ");
+            //double y2 = Convert.ToDouble(Console.ReadLine());
 
-            point.SetPoint1(x1, y1);
-            point.SetPoint2(x2, y2);
+            //point.SetPoint1(x1, y1);
+            //point.SetPoint2(x2, y2);
 
-            Console.WriteLine("\nEntered Points:");
-            point.ShowPoints();
+            //Console.WriteLine("\nEntered Points:");
+            //point.ShowPoints();
 
-            double distance = point.GetDistance();
-            Console.WriteLine($"\nDistance between the two points = {distance:F2}");
+            //double distance = point.GetDistance();
+            //Console.WriteLine($"\nDistance between the two points = {distance:F2}");
 
             #endregion
-        }
+
+            #region Q03
+            //3.Create a struct called "Person02" with properties "Name" and "Age". 
+            //Write a C# program that takes details of 3 persons as input from the user 
+            //and displays the name and age of the oldest person.
+
+            Person02 person1, person2, person3;
+
+            // --- Input 1 ---
+            Console.Write("Enter name of person 1: ");
+            string name1 = Console.ReadLine();
+
+            Console.Write("Enter age of person 1: ");
+            int age1 = int.Parse(Console.ReadLine());
+
+            person1 = new Person02(name1, age1);
+
+            // --- Input 2 ---
+            Console.Write("Enter name of person 2: ");
+            string name2 = Console.ReadLine();
+
+            Console.Write("Enter age of person 2: ");
+            int age2 = int.Parse(Console.ReadLine());
+
+            person2 = new Person02(name2, age2);
+
+            // --- Input 3 ---
+            Console.Write("Enter name of person 3: ");
+            string name3 = Console.ReadLine();
+
+            Console.Write("Enter age of person 3: ");
+            int age3 = int.Parse(Console.ReadLine());
+
+            person3 = new Person02(name3, age3);
+
+            // --- Find Oldest ---
+            Person02 oldest = person1;
+
+            if (person2.Age > oldest.Age)
+                oldest = person2;
+
+            if (person3.Age > oldest.Age)
+                oldest = person3;
+
+            Console.WriteLine($"\nThe oldest person is: {oldest.Name}, Age: {oldest.Age}");
+        
+        #endregion
+    }
     }
 }
