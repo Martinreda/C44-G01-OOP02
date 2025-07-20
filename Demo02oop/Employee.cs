@@ -12,7 +12,7 @@ namespace Demo02oop
         #region Attrubites
         public int Id;
         public string name;
-        public int age;
+        private int age;
         public decimal salary; 
         #endregion
 
@@ -56,22 +56,30 @@ namespace Demo02oop
         //need to valdation 
         //when use property att=> small property => capital 
 
-        #region full propertey
-        private decimal salary;
-        public decimal Salary
-        {
-            get
-            {
-                return salary;
-            }
-            set
-            {
-                salary = value;
-            }
-        }
+
 
         #endregion
 
+        #region full propertey
+        //auto full prop ? propfull + tab +tab
+
+        //public decimal Salary
+        //{
+        //    get
+        //    {
+        //        return salary;
+        //    }
+        //    set
+        //    {
+        //        salary = value;
+        //    }
+        //}
+
+        #endregion
+
+        #region automatic property
+        // prop + tab + tab autoo
+        public int Age { get; set; } //hna lazm A captal m4 age
         #endregion
 
         #region Method 

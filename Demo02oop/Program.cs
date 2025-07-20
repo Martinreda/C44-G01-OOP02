@@ -75,7 +75,8 @@
             #region Encapsulation properaties
             Employee emp02 = new Employee();
             emp02.Salary = 1500;
-            Console.WriteLine(emp02);
+            Console.WriteLine(emp02.Salary);
+            
              
             #endregion 
         }
