@@ -73,12 +73,27 @@
             #endregion
 
             #region Encapsulation properaties
-            Employee emp02 = new Employee();
-            emp02.Salary = 1500;
-            Console.WriteLine(emp02.Salary);
-            
-             
-            #endregion 
+            //Employee emp02 = new Employee();
+            //emp02.Salary = 1500;
+            //Console.WriteLine(emp02.Salary);
+
+
+            #endregion
+
+            #region Indexer
+            PhoneBook note = new PhoneBook(3);
+            note.AddPerson(0, "martin", 123);
+            note.AddPerson(1, "reda"  , 142);
+            note.AddPerson(2, "gabra" , 124);
+
+            Console.WriteLine(note.GetPersonNumber("reda"));
+            note.SetPersonNumber("martin", 14444);
+            Console.WriteLine( note.GetPersonNumber("martin"));
+
+
+            note["Martin"] = 154;
+
+            #endregion
         }
     }
 }
